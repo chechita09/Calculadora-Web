@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: #e28f99;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 {
+    color: #f5f0f0;
+    font-size: 60px;
+    text-align: center;
+}
+main {
+    display: flex;
+    margin-top: 25px;
+}
+.body-calculator {
+    width: 300px;
+    max-width: 300px;
+    border: 2px solid #f5f0f0;
+    background-color: rgba(255,255,255, 0.2);
+    padding: 15px;
+}
+.display {
+    text-align: right;
+    padding: 10px;
+    background: rgba(0,0,0, 0.8);
+    margin-bottom: 15px;
+    color: #f5f0f0;
+    font-size: x-large;
+}
+.keypad {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+.keypad :first-child {
+    height: 0;
+    padding-bottom: 100%;
+}
+#backspace, #firstChild {
+    grid-column: 1;
+    grid-row: 1;
+}
+.buttonNum, .buttonMath, .buttonOperation {
+    border: 1px solid #f5f0f0;
+    font-size: larger;
+    font-weight: bold;
+    color: #f5f0f0;
+    background: rgba(0,0,0, 0.2);
+}
+.buttonNum:focus {
+    outline: none;
+    background: rgba(0,0,0, 0.1);
+}
+
+.buttonMath:focus, .buttonOperation:focus {
+    outline: none;
+    background-color: rgba(0,0,0, 0.4);
+}
+#zero {
+    grid-column: span 2;
+}
+#space {
+    grid-column: span 3;
+}
+#equals, #sum {
+    grid-row: span 2;
+}
+.buttonOperation, .buttonMath {
+    background-color: rgba(0,0,0, 0.6);
+}
+
+#history {
+    width: 200px;
+    height: 200px;
+    background: rgba(0,0,0, 0.6);
+    color: #f5f0f0;
+    text-align: right;
+    padding: 15px;
+    border: 1px solid #f5f0f0;
+    font-size: large;
+    margin: 30px;
+    overflow: auto;
+}

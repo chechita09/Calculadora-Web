@@ -11,7 +11,7 @@
     if (e.key == 'Backspace'){
        deleteNumber()
     }
-    if (e.key == 'Delete'){
+    if (e.key == 'Delete' || e.key == 'Escape'){
         runOperation('clear')
     }
 })
